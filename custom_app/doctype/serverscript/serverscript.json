@@ -1,0 +1,24 @@
+{
+    "doctype": "Server Script",
+    "script_type": "API",
+    "api_methods": [
+        {
+            "method": "emit_message",
+            "description": "Emit a message and show a popup on the desk UI.",
+            "args": {
+                "message": "string"
+            },
+            "code": "frappe.publish_realtime('custom_app/message', {'message': message})"
+        },
+        {
+            "method": "broadcast_event",
+            "description": "Broadcast an event with a message, action type, and optional user.",
+            "args": {
+                "message": "string",
+                "action_type": "string",
+                "user": "string"
+            },
+            "code": "if user:\n    frappe.publish_realtime('custom_app_event', {'message': message, 'action_type': action_type}, user=user)\nelse:\n    frappe.publish_realtime('custom_app_event', {'message': message, 'action_type': action_type})"
+        }
+    ]
+}

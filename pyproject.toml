@@ -1,0 +1,13 @@
+[project]
+name = "custom_app"
+version = "1.0.0"
+description = "A custom Frappe app."
+authors = ["nileshawari360 <your-email@example.com>"]
+license = "MIT"
+
+[tool.setuptools]
+packages = ["custom_app"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

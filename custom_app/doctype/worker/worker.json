@@ -1,0 +1,31 @@
+{
+  "doctype": "DocType",
+  "name": "Worker",
+  "module": "Custom App",
+  "custom": 1,
+  "fields": [
+    {
+      "fieldname": "worker_name",
+      "label": "Worker Name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "employee",
+      "label": "Employee",
+      "fieldtype": "Link",
+      "options": "Employee"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    }
+  ],
+  "is_single": 0,
+  "doctype_meta": {
+    "engine": "InnoDB"
+  }
+}

@@ -1,7 +1,1 @@
 custom_app
-- custom_app
-  - modules.txt
-
-custom_app/custom_app/modules.txt
-
-custom_app
